@@ -10,9 +10,10 @@ const getMark = (value) => {
     return '*';
 }
 
-const upSequence = getSequence(5)
-const downSequece = getSequence(5).reverse();
-upSequence.concat(downSequece).forEach((value, index) => {
+const sequence = getSequence(5)
+const sequenceReversed = sequence.slice().reverse();
+
+sequence.concat(sequeceReversed).forEach((value, index) => {
     const line = (index + 1) + ':';
     const plots = getMark(value).repeat(value);
     console.log(line + '\t' + plots);
