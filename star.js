@@ -11,15 +11,15 @@ const getSequence = (length) => {
   return sequence;
 };
 
-const prots = getSequence(100).forEach((value, index) => {
-  const getMark = (value) => {
-    if(value % 5 == 0) {
-      return '^';
-    }
-    return '*';
+const getMark = (value) => {
+  if(value % 5 == 0) {
+    return '^';
   }
+  return '*';
+}
 
+getSequence(100).forEach((value, index) => {
   const line = (index + 1) + ':';
-  const stars = getMark(value).repeat(value);
-  console.log(line + '\t' + stars);
+  const plots = getMark(value).repeat(value);
+  console.log(line + '\t' + plots);
 });
